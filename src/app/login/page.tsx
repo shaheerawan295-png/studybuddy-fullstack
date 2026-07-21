@@ -33,7 +33,7 @@ export default function LoginPage() {
     }
 
     toast.success("Welcome back.");
-    router.push("/dashboard");
+    router.replace("/dashboard");
   };
 
   return (
@@ -50,10 +50,8 @@ export default function LoginPage() {
           </p>
         </div>
 
-        {/* Card */}
         <div className="bg-white border-2 border-black rounded-2xl shadow-[6px_6px_0px_0px_#000] p-8">
 
-          {/* Badge + Title */}
           <div className="mb-6">
             <span className="inline-block bg-[#a8ff78] text-black text-xs font-black uppercase tracking-widest px-3 py-1 rounded-full border-2 border-black mb-3">
               Welcome Back
@@ -66,16 +64,13 @@ export default function LoginPage() {
             </p>
           </div>
 
-          {/* Error */}
           {error && (
             <div className="mb-4 border-2 border-black bg-red-100 rounded-xl px-4 py-3 shadow-[3px_3px_0px_0px_#000]">
               <p className="text-sm font-bold text-red-700">⚠ {error}</p>
             </div>
           )}
 
-          {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-4">
-            {/* Email */}
             <div>
               <label className="block text-xs font-black uppercase tracking-widest text-black mb-1.5">
                 Email Address
@@ -90,7 +85,6 @@ export default function LoginPage() {
               />
             </div>
 
-            {/* Password */}
             <div>
               <div className="flex items-center justify-between mb-1.5">
                 <label className="block text-xs font-black uppercase tracking-widest text-black">
@@ -114,7 +108,6 @@ export default function LoginPage() {
               />
             </div>
 
-            {/* Submit */}
             <button
               type="submit"
               disabled={loading}
@@ -131,7 +124,6 @@ export default function LoginPage() {
             <div className="flex-1 h-px bg-black/10" />
           </div>
 
-          {/* Switch to Signup */}
           <p className="text-center text-sm font-semibold text-gray-600">
             Don&apos;t have an account?{" "}
             <Link
@@ -143,7 +135,6 @@ export default function LoginPage() {
           </p>
         </div>
 
-        {/* Footer hint */}
         <p className="text-center text-xs text-gray-400 font-medium mt-6">
           Your AI-powered study companion awaits.
         </p>

@@ -49,6 +49,9 @@ const modules = [
 export default async function DashboardPage() {
   const session = await auth();
 
+  // ❌ KOI REDIRECT NAHI — yeh line bilkul mat likhna
+  // if (session?.user) { redirect("/dashboard") } ← KABHI NAHI
+
   return (
     <main className="min-h-screen bg-stone-50 px-4 py-6 text-slate-900 sm:px-6 lg:px-8 lg:py-10">
       <div className="mx-auto max-w-6xl space-y-8">
